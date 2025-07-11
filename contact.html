@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("elVkuz72e3FtpQ-CH");
+    })();
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-mug-hot brand-Icon"></i>
+      <span class="brand-Name">brew & bites</span>
+    </div>
+    <i class="fa-solid fa-bars toggle-Icon" id="toggle-Icon"></i>
+    <nav class="navBar" id="navBar">
+      <ul class="nav-list">
+        <a href="index.html">
+          <li class="nav-items">home</li>
+        </a>
+        <a href="menu.html">
+          <li class="nav-items">menu</li>
+        </a>
+        <a href="about.html">
+          <li class="nav-items">about</li>
+        </a>
+        <a href="contact.html">
+          <li class="nav-items">contact</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <div class="nav-Seperator"></div>
+
+  <div class="container-fluid">
+    <div class="form-container" data-aos="fade-down">
+      <form class="contact-form" action="#" method="post" id="contact-form">
+        <h1 class="section-title">contact us</h1>
+        <label for="username">name</label>
+        <input type="text" id="username" name="username" placeholder="Your Name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+      <span id="form-status"></span>
+    </div>
+    <div class="location-container" data-aos="fade-up">
+      <h1 class="section-title">
+        our location
+      </h1>
+      <img src="assets/imgs/location.png" class="location-image" alt="">
+      <p class="location-name">123 Main Street, San Francisco, CA 94101</p>
+      <p class="telephone-number">(415) 555-1212</p>
+      <p class="schedulte-dates">Saturday - Sunday: 8 AM - 6 PM</p>
+      <p class="schedulte-dates">Monday - Friday: 7 AM - 7 PM</p>
+    </div>
+  </div>
+  <script src="assets/header.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/contact.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

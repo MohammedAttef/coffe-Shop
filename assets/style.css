@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Parkinsans", sans-serif;
+  background-color: #201c13;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+
+.toggle-Icon {
+  display: none;
+  transition: .4s ease;
+
+  &:hover {
+    color: #c49c68;
+  }
+}
+
+.nav-toggle {
+  display: block !important;
+}
+
+
+
+header {
+  background-color: #201c13;
+  color: #fff;
+  display: flex;
+  text-transform: capitalize;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  border-bottom: .5px solid #2c261a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+
+  .logo {
+    cursor: pointer;
+    transition: .4s ease;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: #c49c68;
+      scale: 1.05;
+    }
+  }
+
+
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-items {
+      cursor: pointer;
+      transition: .4s ease;
+
+      &:hover {
+        color: #c49c68;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .toggle-Icon {
+      display: block;
+
+    }
+
+    .navBar {
+      padding: 1rem;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: #201c13;
+      display: none;
+      transition: .4s ease;
+
+      .nav-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.nav-Seperator {
+  width: 100%;
+  height: 65px
+}
+
+.hero-section {
+  margin-top: 1rem;
+  background-image: url("imgs/main-hero.png");
+  border-radius: 10px;
+  overflow: hidden;
+
+  .hero-overlay {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 3rem;
+    text-transform: capitalize;
+    height: 480px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    .hero-description {
+      color: #ffffffb9;
+    }
+
+    .hero-explore {
+      border: none;
+      background-color: #d5a358;
+      color: #000;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: "Parkinsans", sans-serif;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: .4s ease;
+      text-decoration: none;
+
+
+      &:hover {
+        background-color: #976421;
+        color: #fff;
+      }
+    }
+
+    @media (max-width:480px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+
+}
+
+.section-title {
+  color: #fff;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  font-weight: bold;
+
+  @media (max-width:480px) {
+    text-align: center;
+  }
+}
+
+.customer-favourites {
+  .best-selling-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+
+    .item-card {
+      display: flex;
+      justify-content: space-between;
+      text-transform: capitalize;
+
+      .item-details {
+        .item-name {
+          font-weight: bold;
+        }
+
+        .item-price {
+          margin-bottom: 1rem;
+          color: #c2b098;
+        }
+
+        padding: 2rem 0;
+
+        .order-button {
+          background-color: #403829;
+          color: #fff;
+          text-transform: capitalize;
+          border: none;
+          padding: .5rem 1rem;
+          border-radius: 5px;
+          font-family: "Parkinsans", sans-serif;
+          cursor: pointer;
+          transition: .4s ease;
+
+          &:hover {
+            background-color: #4f4532;
+          }
+
+        }
+
+
+      }
+
+      .item-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+      }
+
+      @media (max-width:480px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+
+  }
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  @media (max-width:480px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-card {
+    background-color: #2f291d;
+    border: 1px solid #5E4F3B;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    flex: 1;
+    cursor: pointer;
+    transition: .4s ease;
+
+    &:hover {
+      scale: 1.01;
+    }
+
+    >*:not(.feature-description) {
+      margin-bottom: .5rem;
+    }
+
+    .feature-icon {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .feature-title {
+      color: white;
+      text-transform: capitalize;
+      font-size: 1.25rem;
+    }
+
+    .feature-description {
+      color: #C2B099
+    }
+  }
+}
+
+/* menu Page */
+.categories-nav {
+  margin: 2rem 0;
+  border-bottom: 2px solid #5E4F3B;
+
+  .categories-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+
+    .category-item {
+      text-transform: capitalize;
+      color: #C2B099;
+      transition: .4s ease;
+      cursor: pointer;
+      padding: 16px 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: .4s ease;
+        background-color: #fff;
+      }
+
+
+
+      &:hover {
+        color: #fff;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+}
+
+.menu-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .item-card {
+    flex: 0 0 calc(20% - 9.6px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s ease;
+
+    &:hover {
+
+      img {
+        scale: 1.02;
+        border-radius: 12px;
+        z-index: 1;
+      }
+    }
+
+    img {
+      width: 222px;
+      height: 222px;
+      border-radius: 8px;
+      transition: .4s ease;
+    }
+
+    .item-name {
+      color: #fff;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+
+    .item-description {
+      color: #C2B099;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+
+  @media (max-width:480px) {
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* about page */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 1.5rem;
+  color: #fff;
+
+  .about-description {
+    color: #dfd4c7;
+    padding-right: 1rem;
+  }
+
+  .hero-grinder {
+    max-width: 828px;
+    height: 619px;
+    border-radius: 10px;
+    transition: .4s ease;
+
+    &:hover {
+      scale: 1.01;
+    }
+
+    @media (max-width:480px) {
+      width: 350px;
+      height: 310px;
+    }
+  }
+
+  .about-button {
+    border: none;
+    background-color: #d5a358;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Parkinsans", sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #976421;
+      color: #fff;
+    }
+  }
+
+  .barista-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .barista-hero {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid #201c13;
+      margin-left: -15px;
+    }
+  }
+
+  .barista-names {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .name-cards {
+      background-color: #2f291d;
+      border: 1px solid #5E4F3B;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      flex: 1;
+      cursor: pointer;
+      transition: .4s ease;
+      text-transform: capitalize;
+
+      &:hover {
+        scale: 1.01;
+      }
+
+    }
+
+    @media (max-width:480px) {
+      flex-direction: column;
+      align-items: stretch;
+
+      .name-cards {
+        flex: 1;
+      }
+    }
+  }
+
+}
+
+.cards-animation-customizer {
+  display: none;
+
+  @media (max-width:480px) {
+    display: block;
+  }
+}
+
+/* contact page  */
+.container-fluid {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+
+    >*:not(label) {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      color: #fff;
+      text-transform: capitalize;
+      margin-bottom: .5rem;
+    }
+
+    input,
+    textarea {
+      width: 400px;
+      font-family: "Parkinsans", sans-serif;
+      background-color: #2e291c;
+      color: #c2b099;
+      padding: 1rem 1rem;
+      border-radius: 10px;
+      transition: .4s ease;
+      outline: none;
+      border: none;
+
+      &:focus {
+        border: #5E4F3B 1px solid;
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .submit-btn {
+      border: none;
+      background-color: #d5a358;
+      color: #000;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: "Parkinsans", sans-serif;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: .4s ease;
+
+      &:hover {
+        background-color: #976421;
+        color: #fff;
+      }
+    }
+
+  }
+
+  #form-status {
+    color: #fff;
+  }
+
+  .location-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    color: #fff;
+
+    .location-image {
+      width: 330px;
+      height: 185px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: ease .4s;
+
+      &:hover {
+        scale: 1.01;
+      }
+    }
+
+    p {
+      transition: .4s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: #c49c68;
+      }
+    }
+  }
+
+  @media (max-width:480px) {
+    flex-direction: column;
+
+    .location-container,
+    .form-container {
+      align-items: center;
+      width: auto;
+
+      textarea,
+      input {
+        width: 357px;
+      }
+    }
+  }
+}

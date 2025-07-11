@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <!-- Header- Repetetive in each section  -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-mug-hot brand-Icon"></i>
+      <span class="brand-Name">brew & bites</span>
+    </div>
+    <i class="fa-solid fa-bars toggle-Icon" id="toggle-Icon"></i>
+    <nav class="navBar" id="navBar">
+      <ul class="nav-list">
+        <a href="index.html">
+          <li class="nav-items">home</li>
+        </a>
+        <a href="menu.html">
+          <li class="nav-items">menu</li>
+        </a>
+        <a href="about.html">
+          <li class="nav-items">about</li>
+        </a>
+        <a href="">
+          <li class="nav-items">contact</li>
+        </a>
+
+
+      </ul>
+    </nav>
+  </header>
+  <!-- Seperator for the navbar's fixed position  -->
+  <div class="nav-Seperator"></div>
+  <section class="container">
+    <!-- Main Section - Not Repetetive -->
+    <section class="hero-section">
+      <div class="hero-overlay">
+        <h1 class="hero-title">brewing passion , one cup at a time</h1>
+        <p class="hero-description">artisan coffe made fresh daily</p>
+        <a href="menu.html" class="hero-explore">explore menu</a>
+      </div>
+    </section>
+    <section class="customer-favourites">
+      <p class="section-title">customer favourites</p>
+      <div class="best-selling-items-container" id="best-selling-items-container">
+
+      </div>
+    </section>
+    <!-- Features Section - Not repetetive -->
+    <p class="section-title">why choose us</p>
+    <section class="features-section">
+      <div class="feature-card" data-aos="fade-down">
+        <p>
+          <i class="fa-solid fa-mug-hot feature-icon"></i>
+        </p>
+        <p class="feature-title">
+          fresh beans
+        </p>
+        <p class="feature-description">
+          We source the finest beans from around the world, roasted in-house to perfection.
+        </p>
+      </div>
+      <div class="feature-card" data-aos="fade-up">
+        <p><i class="fa-solid fa-ice-cream feature-icon"></i></p>
+        <p class="feature-title">
+          Cold & Hot Brews
+        </p>
+        <p class="feature-description">
+          Enjoy our expertly crafted hot and cold brews, from classic lattes to refreshing iced coffees.
+        </p>
+      </div>
+      <div class="feature-card" data-aos="fade-down">
+        <p><i class="fa-solid fa-truck feature-icon"></i></p>
+        <p class="feature-title">Fast Local Delivery</p>
+        <p class="feature-description">Get your favorite coffee delivered quickly and reliably to your doorstep.</p>
+      </div>
+    </section>
+    <div class="nav-Seperator "></div>
+    <div class="nav-Seperator cards-animation-customizer"></div>
+    <div class="nav-Seperator cards-animation-customizer"></div>
+    <div class="nav-Seperator cards-animation-customizer"></div>
+    </div>
+    <script src="assets/main.js"></script>
+    <script src="assets/header.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
